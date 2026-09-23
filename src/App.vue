@@ -87,7 +87,6 @@ const brands = [
     titleSize: 70,
     link: "https://783883.com/zh-cn/raf/75KEQ",
   },
-
   {
     en: "William Hill",
     cn: "威廉希尔",
@@ -212,13 +211,6 @@ const features = [
 .nav-link:hover {
   color: #111827;
 }
-
-/* .avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-} */
 
 /* ===== 双品牌 Hero ===== */
 .hero {
@@ -515,37 +507,63 @@ const features = [
   }
 }
 
-/* ===== 响应式 ===== */
+/* ===== 响应式（手机端适配） ===== */
 @media (max-width: 900px) {
+  .nav {
+    padding: 14px 16px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .logo-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
   .nav-center {
     display: none;
   }
 
   .hero {
-    padding: 48px 24px 60px;
+    padding: 24px 12px 40px;
   }
 
-  .hero-inner {
+  .hero-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .hero-title {
-    font-size: 40px;
+  .brand-card {
+    padding: 28px 20px;
+    border-radius: 24px;
   }
 
-  .visual-circle {
-    font-size: 60px;
-    margin-top: 20px;
+  .brand-title {
+    font-size: 32px !important;
   }
 
-  .plus {
-    font-size: 40px;
-    margin: 0 12px;
+  .brand-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
   }
 
   .features {
     grid-template-columns: 1fr;
-    padding: 0 24px 60px;
+    padding: 0 12px 40px;
+    gap: 14px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .btn {
+    padding: 13px 28px;
+    font-size: 15px;
   }
 }
 </style>
