@@ -532,12 +532,21 @@ const features = [
   }
 
   .hero {
-    padding: 24px 12px 40px;
+    padding: 48px 24px 60px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    /* gap: 16px; */
+  }
+
+  .brand-name {
+    font-size: 42px !important;
+    letter-spacing: -2px; /* 收紧字母间距，挤一点 */
+  }
+  .features {
+    grid-template-columns: 1fr;
+    padding: 0 24px 60px;
   }
 
   .brand-card {
