@@ -4,7 +4,7 @@
     <nav class="nav">
       <div class="nav-left">
         <div class="logo">
-          <div class="logo-icon">BW</div>
+          <div class="logo-icon">WB</div>
           <span class="logo-text">
             <span class="brand-blue">BETVICTOR</span>
             <span class="brand-sep">&amp;</span>
@@ -247,7 +247,7 @@ const features = [
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 35px;
-  padding: 56px 48px;
+  padding: 30px 50px;
   overflow: hidden;
   transition: all 0.3s;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
@@ -282,6 +282,9 @@ const features = [
   color: #111827;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
 }
 
 .brand-desc {
