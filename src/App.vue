@@ -62,6 +62,29 @@
       </div>
     </section>
 
+    <!-- 👇 在这里插入这段带图标的话 👇 -->
+    <div class="middle-tip">
+      <!-- 图标可以直接用 SVG，也可以像你代码里一样用 emoji，这里我给你写了 SVG，显得更精致 -->
+      <svg
+        class="icon"
+        viewBox="0 0 24 24"
+        width="1.2em"
+        height="1.2em"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="M9 12l2 2 4-4"></path>
+      </svg>
+      <span class="shake-text"
+        >温馨提示 · 请关闭科学上网再访问网站，否则打不开，感谢您的支持！</span
+      >
+    </div>
+    <!-- 👆 插入结束 👆 -->
+
     <!-- 特性卡片 -->
     <section class="features">
       <div class="feature-card" v-for="item in features" :key="item.title">
@@ -577,5 +600,65 @@ const features = [
     padding: 13px 28px;
     font-size: 15px;
   }
+}
+
+.middle-tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  /* 👇 1. 位置往上挪 👇 */
+  margin-top: -30px; /* 负边距让它往上挤 */
+  margin-bottom: 50px; /* 下面留出更多空间 */
+  position: relative;
+  z-index: 10;
+}
+
+.middle-tip .icon {
+  color: #97ef44; /* 图标换成扎眼的红色 */
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(128, 95, 95, 0.6)); /* 图标红光 */
+}
+
+/* 👇 2. 文字样式：大字体、红黄渐变、发光 👇 */
+.shake-text {
+  /* 字体放大：最小 20px，最大 36px */
+  font-size: clamp(20px, 2.5vw, 20px);
+  font-weight: 900; /* 最粗的字重 */
+  letter-spacing: 2px;
+
+  /* 渐变色：亮红色到金黄色 */
+  background: linear-gradient(90deg, #ff4d4f, #faad14);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* 文字阴影：增加立体感和扎眼程度 */
+  text-shadow: 0 2px 10px rgba(255, 77, 79, 0.4);
+
+  /* 👇 3. 重点：抖动动画 👇 */
+  animation: shake-anim 6s infinite;
+  display: inline-block; /* 必须加，否则动画可能不生效 */
+}
+
+/* 👇 4. 定义抖动关键帧动画 👇 */
+@keyframes shake-anim {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px) rotate(-1deg);
+  } /* 往左歪 */
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px) rotate(1deg);
+  } /* 往右歪 */
 }
 </style>
