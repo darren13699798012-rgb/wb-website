@@ -4,7 +4,7 @@
     <nav class="nav">
       <div class="nav-left">
         <div class="logo">
-          <div class="logo-icon">WB</div>
+          <div class="logo-icon">BW</div>
           <span class="logo-text">
             <span class="brand-blue">BETVICTOR</span>
             <span class="brand-sep">&amp;</span>
