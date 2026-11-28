@@ -14,18 +14,18 @@ document.onkeydown = (e) => {
 };
 
 // 2. 静态反调试检查（检测到控制台开启时循环触发）
-setInterval(() => {
-  const startTime = performance.now();
-  // 核心逻辑：如果开发者工具开启并使用断点，执行会明显变慢
-  (function check() {
-    if (("" + 1 / 1).length !== 1 || 1 % 20 === 0) {
-      (function () {}).constructor("debugger")();
-    } else {
-      (function () {}).constructor("debugger")();
-    }
-  })();
-  const endTime = performance.now();
-  if (endTime - startTime > 100) {
-    // 可以在这里做静默处理或重定向
-  }
-}, 2000);
+// setInterval(() => {
+//   const startTime = performance.now();
+//   // 核心逻辑：如果开发者工具开启并使用断点，执行会明显变慢
+//   (function check() {
+//     if (("" + 1 / 1).length !== 1 || 1 % 20 === 0) {
+//       (function () {}).constructor("debugger")();
+//     } else {
+//       (function () {}).constructor("debugger")();
+//     }
+//   })();
+//   const endTime = performance.now();
+//   if (endTime - startTime > 100) {
+//     // 可以在这里做静默处理或重定向
+//   }
+// }, 2000);
